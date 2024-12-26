@@ -117,7 +117,7 @@ const Navbar=()=> {
       <div className='container mx-auto flex justify-between items-center h-full'>
         <div className='px-10'>
             <a href="/">
-            <img src="/logo.svg" alt="logo" /></a>
+            <img src="/logo 1.svg" alt="logo" /></a>
         </div>
         <div className='hidden md:flex flex-grow justify-center '>
             <nav>
