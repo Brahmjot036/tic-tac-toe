@@ -36,6 +36,16 @@ const packages = [
 ]
 
 const Pricing=()=> {
+  const handleScrollToContact = ()=>{
+
+    const targetElement = document.getElementById('contact');
+    if(targetElement){
+      window.scrollTo({
+        top: targetElement.offsetTop,
+        behavior: 'smooth',
+      })
+    }
+  }
   return (
     <div id='pricing' className='bg-[#f7f8fc] pt-32'>
       <div className='container mx-auto px-8'>
@@ -45,13 +55,22 @@ const Pricing=()=> {
         </div>
 
         {/*packages*/}
-        <div className='flex flex-col md:w-5/6 mx-auto md:flex-row gap-8'>
+        <div className='flex flex-col md:w-5/6 mx-auto md:flex-row gap-8 pb-12'>
         {
           packages.map((pkg, index) => (
-            <div key={index}>
-              <h3>{pkg.name}</h3>
-              <hr />
-              <p>{pkg.price} <span></span></p>
+            <div key={index} className='bg-white rounded-lg p-6 flex-1 shadow-lg'>
+              <h3 className='text-2xl font-semibold mb-4'>{pkg.name}</h3>
+              <hr className='w-24 border text-primary border-primary' />
+              <p className='text-3xl font-bold mb-4'>{pkg.price} <span className='text-lg font-normal'>/month</span></p>
+              <p className='text-lg mb-4'>{pkg.description}</p>
+              <ul className='list-disc list-inside space-y-2 mb-6'>
+                {pkg.features.map((feature,idx)=>(
+                  <li key={idx} className=''>{feature}</li>
+                ))}
+              </ul>
+              <button
+              onClick={handleScrollToContact} 
+              className='bg-primary text-white px-4 py-2 rounded'>Get Started</button>
             </div>
           ) )
         }

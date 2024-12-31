@@ -16,7 +16,7 @@ const Navbar=()=> {
     }
 
     const handleScroll = () =>{
-        const sections = ['home','services','about','pricing','testimonial'];
+        const sections = ['home','services','about','pricing'];
         const scrollPosition = window.scrollY+100;
         sections.forEach(section => {
             const element = document.getElementById(section);
@@ -98,7 +98,7 @@ const Navbar=()=> {
                 Pricing
             </a>
             </li>
-            <li>
+            {/* <li>
             <a href="#testimonila" 
             onClick={(e)=>{
                 e.preventDefault();
@@ -108,7 +108,7 @@ const Navbar=()=> {
             className={`text-white ${activeSection === 'testimonial' ? 'isActive' : ''}`}>
                 Testimonial
             </a>
-            </li>
+            </li> */}
         </ul>
     )
 
@@ -125,7 +125,12 @@ const Navbar=()=> {
             </nav>
         </div>
         <div className='hidden md:block'>
-            <a href="#contact" className='text-white bg-primary hover:bg-primary/90 px-4 py-2 rounded'>
+            <a onClick={e=>{
+                        e.preventDefault();
+                        handleScrollTo('contact');
+                        
+                    }} 
+                href="#contact" className='text-white bg-primary hover:bg-primary/90 px-4 py-2 rounded'>
                 Contact Us
             </a>
         </div>
@@ -146,7 +151,9 @@ const Navbar=()=> {
                     <a href="#contact"
                     className='text-white bg-primary hover:bg-primary/90 px-4 py-2 rounded'
                     onClick={(e)=>{e.preventDefault();
-                        handleCloseMenu();}
+                        handleCloseMenu();
+                        handleScrollTo('contact');
+                    }
                     }>
                         Contact Us
                     </a>

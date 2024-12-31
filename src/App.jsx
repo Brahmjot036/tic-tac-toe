@@ -6,6 +6,7 @@ import About from './components/About'
 import Pricing from './components/Pricing'
 import Testimonial from './components/Testimonial'
 import WorkingStep from './components/WorkingStep'
+import Contact from './components/Contact'
 
 function App() {
 
@@ -18,7 +19,7 @@ function App() {
      <About/>
      <WorkingStep/>
      <Pricing/>
-     <Testimonial/>
+     <Contact/>
     </div>
   )
 }
