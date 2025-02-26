@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
 
+
 body {
     scroll-behavior: smooth;
 }
@@ -44,3 +45,23 @@ body {
   .react-tabs__tab-panel--selected {
     display: block;
   }
+  @keyframes clothEffect {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 50% 50%;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .bg-fabric-pattern {
+    background-image: url('/path-to-your-fabric-texture.jpg'); /* Add your fabric texture image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    animation: clothEffect 15s ease-in-out infinite;
+  }
+  
