@@ -1,25 +1,20 @@
 import './App.css'
-import Navbar from './components/Navbar'
-import Services from './components/Services'
+import Services from './components/Second'
 import Hero from './components/Hero'
-import About from './components/About'
-import Pricing from './components/Pricing'
-import Testimonial from './components/Testimonial'
-import WorkingStep from './components/WorkingStep'
-import Contact from './components/Contact'
-
+import Third from './components/Third'
+import Pricing from './components/Last'
+import WorkingStep from './components/Fourth'
+ 
 function App() {
 
 
   return (
     <div className='font-primary overflow-x-hidden'>
-     <Navbar/>
      <Hero/>
      <Services/>
-     <About/>
+     <Third/>
      <WorkingStep/>
      <Pricing/>
-     <Contact/>
     </div>
   )
 }
