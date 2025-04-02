@@ -2,3 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 🎨 Custom Styles */
+@layer utilities {
+  .bg-black {
+    background: #090a0f;
+  }
+  .text-neonBlue {
+    color: #00eaff;
+  }
+  .border-neonBlue {
+    border-color: #00eaff;
+  }
+  .text-neonPink {
+    color: #ff007f;
+  }
+  .shadow-neonBlue {
+    box-shadow: 0 0 15px #00eaff;
+  }
+  .shadow-neonPink {
+    box-shadow: 0 0 15px #ff007f;
+  }
+  .neon-text {
+    text-shadow: 0px 0px 15px rgba(0, 234, 255, 0.9);
+  }
+  .neon-button {
+    background: linear-gradient(90deg, #00eaff, #ff007f);
+  }
+  .bg-glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+  }
+  .bg-grid {
+    background-image: linear-gradient(
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+}
